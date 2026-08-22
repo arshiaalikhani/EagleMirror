@@ -1,4 +1,4 @@
-package com.falcon.mirror;
+package com.eagle.mirror;
 
 import android.graphics.Bitmap;
 import android.graphics.PixelFormat;
@@ -10,6 +10,7 @@ import android.media.projection.MediaProjection;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
+import java.nio.ByteBuffer;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
