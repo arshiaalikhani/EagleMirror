@@ -50,7 +50,7 @@ public class ScreenCastServer {
                 virtualDisplay = mediaProjection.createVirtualDisplay(
                         "ScreenCast",
                         width, height, dpi,
-                        DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
+                        DisplayManager.VIRTUAL_DISPLAY_FLAG_PUBLIC,
                         imageReader.getSurface(),
                         null, null
                 );
@@ -80,8 +80,9 @@ public class ScreenCastServer {
                     Thread.sleep(50); // 20 FPS
                 }
 
-            } catch (IOException | InterruptedException e) {
+            } catch (Throwable e) {
                 Log.e(TAG, "Server error: " + e.getMessage());
+                e.printStackTrace();
             } finally {
                 stop();
             }
